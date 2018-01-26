@@ -50,7 +50,8 @@ ADD setup/requirements.txt setup/requirements.txt
 RUN pip install -r setup/requirements.txt
 
 # Create crontab
-ADD setup/docker/crontab /etc/cron.hourly/nest-datagraph
+# ADD setup/docker/crontab /etc/cron.hourly/nest-datagraph
+ADD setup/docker/crontab.5min /etc/cron.d/nest-datagraph
 
 # Supervisor Config
 ADD setup/docker/supervisord.conf /etc/supervisor/supervisord.conf
